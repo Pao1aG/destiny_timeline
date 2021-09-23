@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import '../styles/Navbar.css'
 
 export default function Navbar(){
 
@@ -8,7 +9,7 @@ export default function Navbar(){
 
     return(
         <nav>
-            <div className= "nav-wrapper blue-grey darken-4">
+            <div className= "nav-wrapper blue-grey darken-3">
                 <Link to="/">
                     <div className= "brand-logo flow-text">Destiny Timeline</div>
                 </Link>

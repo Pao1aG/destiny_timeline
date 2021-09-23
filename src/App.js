@@ -5,7 +5,7 @@ import Quiz from './pages/Quiz';
 import Timeline from './pages/Timeline';
 import About from './pages/About';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
