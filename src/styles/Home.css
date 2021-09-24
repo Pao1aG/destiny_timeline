@@ -1,4 +1,44 @@
-.parallax-container {
-    position: relative;
-    overflow: hidden;
+.container {
+    margin-top: 200px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-large {
+    background-color: #C4C4C4;
+    color: black;
+    font-weight: bold;
+    margin-top: 30px;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.btn-large:hover {
+    background-color:#21819e;
+}
+
+.btn-large:active {
+    background-color: #d49a54;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+img {
+    width: 200px;
 }
