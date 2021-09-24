@@ -1,4 +1,16 @@
-.brand-logo {
+.nav-wrapper {
+    background-color: #434D56;
+}
+
+i.icon-white {
+    color: white;
+}
+
+nav i, nav [class^="mdi-"], 
+nav [class*="mdi-"], nav i.material-icons {
+    font-size: 48px;
+}
+/* .brand-logo {
     margin-left: 20px;
 }
 
@@ -8,4 +20,4 @@
 
 #mobile-demo a {
     font-size: 1.2rem;
-}
+} */

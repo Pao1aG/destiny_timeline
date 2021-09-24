@@ -1,12 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import '../styles/Home.css'
 
 export default function Home() {
-    return(
+
+    const [rerender, setRerender] = useState(false);
+
+    return (
         <>
             <h1> This is the Home Page</h1>
             <div className="parallax-container">
-                <div className="parallax"><img src="http://downloads.bungie.net/images/Wallpapers/Bungie_Day_Wallapaper_4k_01.jpg"/></div>
+                <div className="parallax"><img src="images/parallax1.jpg"/></div>
             </div>
             <div className="section white">
             <div className="row container">
@@ -15,7 +18,7 @@ export default function Home() {
             </div>
             </div>
             <div className="parallax-container">
-                <div className="parallax"><img src="http://downloads.bungie.net/images/Wallpapers/Bungie_Day_Wallapaper_4k_02.jpg"/></div>
+                <div className="parallax"><img src="images/parallax2.jpg"/></div>
             </div>
         </>
     )

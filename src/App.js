@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Quiz from './pages/Quiz';
 import Timeline from './pages/Timeline';
 import About from './pages/About';
 import logo from './logo.svg';
@@ -13,9 +12,6 @@ function App() {
       <Navbar />
       <Route exact path= "/">
         <Home />
-      </Route>
-      <Route exact path= "/quiz">
-          <Quiz />
       </Route>
       <Route exact path= "/timeline">
         <Timeline />
