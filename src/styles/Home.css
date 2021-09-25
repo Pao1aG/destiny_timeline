@@ -42,3 +42,7 @@ p {
 img {
     width: 200px;
 }
+
+.hide {
+    display: none;
+}
