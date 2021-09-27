@@ -14,9 +14,9 @@ export default function Navbar(){
                     <Link to="/" onClick={() => handleChange("home")} className="black-text"> Home </Link>
                 </li>
                 <li className="divider"></li>
-                {/* <li className={currentPage === "timeline" ? "active" : ""}>
+                <li className={currentPage === "timeline" ? "active" : ""}>
                     <Link to="/timeline" onClick={() => handleChange("timeline")} className="black-text"> Timeline </Link>
-                </li> */}
+                </li>
                 <li className="divider"></li>
                 <li className={currentPage === "about" ? "active" : ""}>
                     <Link to="/about" onClick={() => handleChange("about")} className="black-text"> About Us </Link>

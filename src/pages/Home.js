@@ -7,6 +7,7 @@ export default function Home() {
     const [question, setNewQuestion] = useState("home");
     const [selection, setSelection] = useState([]);
     const [render, setRender] = useState("");
+    const [attr, setAttr] = useState("");
 
     function saveResponse(response, q, final) {
         if(selection.length === 0){
@@ -25,15 +26,16 @@ export default function Home() {
         if(final === true){
             console.log("this should generate Timeline component");
             setRender(true);
+            setAttr("hidden");
         }
        
     }
 
-    console.log(selection);
+    // console.log(selection);
     
     return (
         <>
-            <div className="container">
+            <div className={attr === "hidden" ? "hide" : "container"}>
                 <div className="row">
                     <div className="col s12 m6 l7 text-container center-align">
                         <p> Welcome! Let's tailor your experience...</p>

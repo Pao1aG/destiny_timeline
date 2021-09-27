@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Timeline from './pages/Timeline';
+import TimelineSample from './pages/TimelineSample';
 import About from './pages/About';
 import './styles/App.css';
 
@@ -13,7 +13,7 @@ function App() {
         <Home />
       </Route>
       <Route exact path= "/timeline">
-        <Timeline />
+        <TimelineSample />
       </Route>
       <Route exact path= "/about">
         <About />
