@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import M from "materialize-css/dist/js/materialize.min.js";
+import { useRive } from 'rive-react';
 import '../styles/Home.css';
-import Ghost from '../components/Ghost'
+// import Ghost from '../components/Ghost'
 import Timeline from './Timeline';
 import Sidepanel from '../components/Sidepanel';
 import Content from '../components/Content';
@@ -24,7 +25,54 @@ export default function Home() {
         M.Parallax.init(elemsB);
     })
 
-    function saveResponse(response, q, final) {
+    //TODO Ghost Animation
+    const params = {
+        src: "images/destiny_ghost.riv",
+        autoplay: true,
+        animations: ["idle_hover", "back_spin", "back_move", "choose_ani_1", "choose_ani_2", "choose_ani_3" ]
+    }
+    const { RiveComponent, rive } = useRive(params);
+
+
+    function backSpin() {
+        if(rive){
+            rive.play("back_spin")
+        }
+    }
+
+    function backMove() {
+        if(rive){
+            rive.play("back_move")
+        }
+    }
+
+    function wave() {
+        if(rive) {
+            rive.play("choose_ani_1");
+        }
+    }
+
+    function sneeze() {
+        if(rive) {
+            rive.play("choose_ani_2")
+        }
+    }
+
+    function bow() {
+        if(rive) {
+            rive.play("choose_ani_3")
+        }
+    }
+
+    
+    function saveResponse(response, q, final, animation) {
+
+        if(animation === "play1"){
+            wave();
+        } else if (animation === "play2") {
+            bow();
+        }
+
         if(selection.length === 0){
             //to save first response
             setSelection([response]);
@@ -42,12 +90,9 @@ export default function Home() {
             console.log("this should generate Timeline component");
             setRender(true);
             setAttr("hidden");
-        }
-       
+        }     
     }
 
-    // console.log(selection);
-    
     return (
         <>
             <div className={attr === "hidden" ? "hide" : "container question-container"}>
@@ -55,13 +100,20 @@ export default function Home() {
                     <div className="col s12 m6 l7 text-container center-align">
                         <p> Welcome! Let's tailor your experience...</p>
                         <p> Are you a new or returning Guardian?</p>
-                        {/* <img src="images/ghost_freezeframe.jpg" alt="" id="ghost"></img> */}
-                        <Ghost />
+                        {/* <Ghost /> */}
+                        <div style={{ height: "300px", width: "600px"}}>
+                            <RiveComponent />
+                            <button onClick={ backSpin }>Back Spin</button>
+                            <button onClick={ backMove }>Back Move</button>
+                            <button onClick={ wave }>Wave</button>
+                            <button onClick={ sneeze }>Sneeze</button>
+                            <button onClick={ bow }>Bow</button>
+                        </div>
                         
                     </div>
                     <div className={question === "home" ? "col s12 m6 l3 button-container" : "hide"}>
-                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"guardianType": "new"}, "new")}> I'm a new Guardian</a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"guardianType": "returning"}, "returning")}> I'm a returning Guardian</a>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"guardianType": "new"}, "new", "", "play1")}> I'm a new Guardian</a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"guardianType": "returning"}, "returning", "", "play2")}> I'm a returning Guardian</a>
                     </div>
                     {/* NEW GUARDIAN QUESTIONS */}
                     <div className={question === "new" ? "col s12 m6 l3 button-container" : "hide"}>

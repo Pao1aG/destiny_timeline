@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useRive, useStateMachineInput } from 'rive-react';
 
-export default function Ghost() {
+export default function Ghost(props) {
+    console.log("This is from ghost");
+    console.log(props)
+
     const[buttonText, setButtonText] = useState("Pause");
 
     const params = {
@@ -40,6 +43,17 @@ export default function Ghost() {
 
     function bow() {
         if(rive) {
+            rive.play("choose_ani_3")
+        }
+    }
+
+    //TODO: ANIMATION BASED ON SELECTION
+    if(props.selection.guardianType === "new") {
+        if(rive){
+            rive.play("choose_ani_1")
+        }
+    } else {
+        if(rive){
             rive.play("choose_ani_3")
         }
     }
