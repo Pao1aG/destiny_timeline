@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Home.css'
 import Timeline from './Timeline';
+import Sidepanel from '../components/Sidepanel';
+import Content from '../components/Content';
 
 export default function Home() {
 
@@ -98,6 +100,8 @@ export default function Home() {
             {render === true ? 
                 <>
                <Timeline selection={selection}/>
+               <Sidepanel />
+               <Content />
                </>
             : "not rendering yet"}
         </>
