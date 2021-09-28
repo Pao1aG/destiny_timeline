@@ -44,7 +44,8 @@ p {
 }
 
 .sidenav {
-    background-color: #434D56;
+    /* background-color: #434D56; */
+    background-color: #20262D;
 }
 
 #btn-icons {
