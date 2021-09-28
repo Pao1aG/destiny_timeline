@@ -49,24 +49,28 @@ p {
 
 #icon-div {
     width: 100%;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
 }
 
-.chapter-imgs {
-    width: 900px;
-    height: 250px;
+.timeline-main {
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-.chapter-content {
-    width: 900px;
+#destiny-year {
+    text-decoration: underline;
 }
+
+/* .chapter-imgs {
+    width: 1920px;
+    max-height: 250px;
+} */
 
 .weapon-imgs {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 900px;
 }
 
 .hide {
