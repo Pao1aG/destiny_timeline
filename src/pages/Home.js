@@ -107,15 +107,15 @@ export default function Home() {
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"misc": "no"}, "seasonsA")}> No </a>
                     </div>
                     <div className={question === "catch" ? "col s12 m6 l3 button-container" : "hide"}>
-                        {/* <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"chapter": "destiny1"}, "seasons")}> Destiny 1 </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "takenKing"}, "seasons")}> Taken King </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "riseOfIron"}, "seasons")}> Rise of Iron </a> */}
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "destiny2"}, "seasons")}> Destiny 2 </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "curseOfOsiris"}, "seasons")}> Curse of Osiris </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "warmind"}, "seasons")}> Warmind </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "forsaken"}, "seasons")}> Forsaken </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "shadowkeep"}, "seasons")}> Shadowkeep </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "beyondLight"}, "seasons")}> Beyond Light </a>
+                        {/* <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"chapter": "destiny1"}, "seasonsA")}> Destiny 1 </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "takenKing"}, "seasonsA")}> Taken King </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "riseOfIron"}, "seasonsA")}> Rise of Iron </a> */}
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "destiny2"}, "seasonsA")}> Destiny 2 </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "curseOfOsiris"}, "seasonsA")}> Curse of Osiris </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "warmind"}, "seasonsA")}> Warmind </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "forsaken"}, "seasonsA")}> Forsaken </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "shadowkeep"}, "seasonsA")}> Shadowkeep </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "beyondLight"}, "seasonsA")}> Beyond Light </a>
                     </div>
                     <div className={question === "seasonsA" ? "col s12 m6 l3 button-container" : "hide"}>
                         <h4> Do you want to see individual seasons? </h4>
