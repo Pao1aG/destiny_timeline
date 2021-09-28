@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import '../styles/Home.css'
+import React, { useState, useEffect } from 'react';
+import M from "materialize-css/dist/js/materialize.min.js";
+import '../styles/Home.css';
 import Timeline from './Timeline';
 import Sidepanel from '../components/Sidepanel';
 import Content from '../components/Content';
@@ -10,6 +11,17 @@ export default function Home() {
     const [selection, setSelection] = useState([]);
     const [render, setRender] = useState("");
     const [attr, setAttr] = useState("");
+
+    useEffect(() => {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+
+        var elemsA = document.querySelectorAll('.tooltipped');
+        M.Tooltip.init(elemsA);
+
+        var elemsB = document.querySelectorAll('.parallax');
+        M.Parallax.init(elemsB);
+    })
 
     function saveResponse(response, q, final) {
         if(selection.length === 0){
@@ -50,7 +62,7 @@ export default function Home() {
                     </div>
                     {/* NEW GUARDIAN QUESTIONS */}
                     <div className={question === "new" ? "col s12 m6 l3 button-container" : "hide"}>
-                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"newTimeline": "entire"}, "seasonsNew")}> Entire Timeline</a>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"newTimeline": "entire"}, "seasons1")}> Entire Timeline</a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"newTimeline": "highlights"}, "highlights1")}> Highlights</a>
                     </div>
                     <div className={question === "highlights1" ? "col s12 m6 l3 button-container" : "hide"}>
