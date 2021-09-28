@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import M from "materialize-css/dist/js/materialize.min.js";
 import '../styles/Home.css';
+import Ghost from '../components/Ghost'
 import Timeline from './Timeline';
 import Sidepanel from '../components/Sidepanel';
 import Content from '../components/Content';
@@ -54,7 +55,9 @@ export default function Home() {
                     <div className="col s12 m6 l7 text-container center-align">
                         <p> Welcome! Let's tailor your experience...</p>
                         <p> Are you a new or returning Guardian?</p>
-                        <img src="images/ghost_freezeframe.jpg" alt="" id="ghost"></img>
+                        {/* <img src="images/ghost_freezeframe.jpg" alt="" id="ghost"></img> */}
+                        <Ghost />
+                        
                     </div>
                     <div className={question === "home" ? "col s12 m6 l3 button-container" : "hide"}>
                         <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"guardianType": "new"}, "new")}> I'm a new Guardian</a>
