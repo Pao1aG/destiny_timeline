@@ -5,43 +5,75 @@ export default function Ghost() {
     const[buttonText, setButtonText] = useState("Pause");
 
     const params = {
-        // src: "images/destiny_ghost.riv",
-        src: "images/poison-loader.riv",
+        src: "images/destiny_ghost.riv",
+        // src: "images/poison-loader.riv",
         autoplay: true,
+        animations: ["idle_hover", "back_spin", "back_move", "choose_ani_1", "choose_ani_2", "choose_ani_3" ]
     }
 
     const { RiveComponent, rive } = useRive(params);
 
-    //FIRST ANIMATION TEST
-    useEffect(() => {
-        if(rive) {
 
-          rive.on("play", () => {
-              setButtonText("Pause")
-              console.log("I am playing")
-          });
-
-          rive.on("pause", () => {
-              setButtonText("Play");
-              console.log("I am paused");
-          })
-        }
-
-    },[rive])
-
-    function onButtonClick() {
-        if(rive) {
-            if(rive.isPlaying){
-                rive.pause();
-                console.log("the pause button was clicked");
-            } else {
-                rive.play();
-            } 
+    function backSpin() {
+        if(rive){
+            rive.play("back_spin")
         }
     }
 
+    function backMove() {
+        if(rive){
+            rive.play("back_move")
+        }
+    }
+
+    function wave() {
+        if(rive) {
+            rive.play("choose_ani_1");
+        }
+    }
+
+    function sneeze() {
+        if(rive) {
+            rive.play("choose_ani_2")
+        }
+    }
+
+    function bow() {
+        if(rive) {
+            rive.play("choose_ani_3")
+        }
+    }
+
+    //FIRST ANIMATION TEST
+    // useEffect(() => {
+    //     if(rive) {
+
+    //       rive.on("play", () => {
+    //           setButtonText("Pause")
+    //           console.log("I am playing")
+    //       });
+
+    //       rive.on("pause", () => {
+    //           setButtonText("Play");
+    //           console.log("I am paused");
+    //       })
+    //     }
+
+    // },[rive])
+
+    // function onButtonClick() {
+    //     if(rive) {
+    //         if(rive.isPlaying){
+    //             rive.pause();
+    //             console.log("the pause button was clicked");
+    //         } else {
+    //             rive.play();
+    //         } 
+    //     }
+    // }
+
     //SECOND ANIMATION TEST
-    
+
     // function onMouseEnter() {
     //     if(rive) {
     //         rive.play();
@@ -59,7 +91,12 @@ export default function Ghost() {
             <RiveComponent 
                 // onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
             />
-            <button onClick={onButtonClick}>{buttonText}</button>
+            {/* <button onClick={onButtonClick}>{buttonText}</button> */}
+            <button onClick={ backSpin }>Back Spin</button>
+            <button onClick={ backMove }>Back Move</button>
+            <button onClick={ wave }>Wave</button>
+            <button onClick={ sneeze }>Sneeze</button>
+            <button onClick={ bow }>Bow</button>
         </div>
             
     )
