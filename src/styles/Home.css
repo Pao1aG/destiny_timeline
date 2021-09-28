@@ -47,6 +47,17 @@ p {
     background-color: #434D56;
 }
 
+#btn-icons {
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+#dots {
+    opacity: 80%;
+}
+
 #icon-div {
     width: 100%;
     margin-bottom: 10px;
@@ -82,14 +93,14 @@ header, body, footer {
     padding-left: 300px;
 }
 
-@media only screen and (min-width: 976px){
-    #hide-icon {
-        display: none;
-    }
-}
-
 @media only screen and (max-width : 992px) {
     header, body, footer {
         padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 993px){
+    #hide-icon {
+        display: none;
     }
 }
