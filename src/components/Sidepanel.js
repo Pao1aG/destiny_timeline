@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Sidepanel () {
+    
 
     return (
         <div className="center-align side-panel">

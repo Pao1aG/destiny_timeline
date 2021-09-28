@@ -65,10 +65,10 @@ export default function Home() {
                     </div>
                     <div className={question === "highlights3" ? "col s12 m6 l3 button-container" : "hide"}>
                         <h4> Do you want to include Miscellaneous missions? </h4>
-                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"misc": "yes"}, "seasonsNew")}> Yes </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"misc": "no"}, "seasonsNew")}> No </a>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"misc": "yes"}, "seasons1")}> Yes </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"misc": "no"}, "seasons1")}> No </a>
                     </div>
-                    <div className={question === "seasonsNew" ? "col s12 m6 l3 button-container" : "hide"}>
+                    <div className={question === "seasons1" ? "col s12 m6 l3 button-container" : "hide"}>
                         <h4> Do you want to see individual seasons? </h4>
                         <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"seasons": "yes"}, "", true)}> Yes </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"seasons": "no"}, "", true)}> No </a>
@@ -76,13 +76,28 @@ export default function Home() {
                
                     {/* RETURNING GUARDIAN QUESTIONS */}
                     <div className={question === "returning" ? "col s12 m6 l3 button-container" : "hide"}>
-                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"returningTimeline": "entire"}, "seasons")}> Entire Timeline</a>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"returningTimeline": "entire"}, "highlightsA")}> Entire Timeline</a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"returningTimeline": "catch"}, "catch")}> Catch Up </a>
                     </div>
+                    <div className={question === "highlightsA" ? "col s12 m6 l3 button-container" : "hide"}>
+                        <h4> Do you want to include Exotics and Exotic Quests? </h4>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"exotics": "yes"}, "highlightsB")}> Yes </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"exotics": "no"}, "highlightsB")}> No </a>
+                    </div>
+                    <div className={question === "highlightsB" ? "col s12 m6 l3 button-container" : "hide"}>
+                        <h4> Do you want to include Raids and Dungeons? </h4>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"raids": "yes"}, "highlightsC")}> Yes </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"raids": "no"}, "highlightsC")}> No </a>
+                    </div>
+                    <div className={question === "highlightsC" ? "col s12 m6 l3 button-container" : "hide"}>
+                        <h4> Do you want to include Miscellaneous missions? </h4>
+                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"misc": "yes"}, "seasonsA")}> Yes </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"misc": "no"}, "seasonsA")}> No </a>
+                    </div>
                     <div className={question === "catch" ? "col s12 m6 l3 button-container" : "hide"}>
-                        <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"chapter": "destiny1"}, "seasons")}> Destiny 1 </a>
+                        {/* <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"chapter": "destiny1"}, "seasons")}> Destiny 1 </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "takenKing"}, "seasons")}> Taken King </a>
-                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "riseOfIron"}, "seasons")}> Rise of Iron </a>
+                        <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "riseOfIron"}, "seasons")}> Rise of Iron </a> */}
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "destiny2"}, "seasons")}> Destiny 2 </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "curseOfOsiris"}, "seasons")}> Curse of Osiris </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "warmind"}, "seasons")}> Warmind </a>
@@ -90,7 +105,7 @@ export default function Home() {
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "shadowkeep"}, "seasons")}> Shadowkeep </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"chapter": "beyondLight"}, "seasons")}> Beyond Light </a>
                     </div>
-                    <div className={question === "seasons" ? "col s12 m6 l3 button-container" : "hide"}>
+                    <div className={question === "seasonsA" ? "col s12 m6 l3 button-container" : "hide"}>
                         <h4> Do you want to see individual seasons? </h4>
                         <a className="waves-effect waves-light btn-large" onClick={() =>  saveResponse({"seasons": "yes"}, "", true)}> Yes </a>
                         <a className="waves-effect waves-light btn-large"  onClick={() => saveResponse({"seasons": "no"}, "", true)}> No </a>

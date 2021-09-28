@@ -38,7 +38,10 @@ export default function Timeline(props) {
                     {props.selection[1].returningTimeline === "entire" ? 
                         <>
                             <p> Wants to include entire timeline </p>
-                            <p>Want to include individual seasons? {props.selection[2].seasons}</p>
+                            <p>Want to include exotics? {props.selection[2].exotics}</p>
+                            <p>Want to include raids? {props.selection[3].raids}</p>
+                            <p>Want to include misc? {props.selection[4].misc}</p>
+                            <p>Want to include individual seasons? {props.selection[5].seasons}</p>
                         </>
                         :
 
