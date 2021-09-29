@@ -29,7 +29,7 @@ export default function Home() {
     const params = {
         src: "images/destiny_ghost.riv",
         autoplay: true,
-        animations: ["idle_hover", "back_spin", "back_move", "choose_ani_1", "choose_ani_2", "choose_ani_3" ]
+        animations: ["choose_ani_1", "idle_hover"]
     }
     const { RiveComponent, rive } = useRive(params);
 
