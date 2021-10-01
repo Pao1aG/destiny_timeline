@@ -1,0 +1,29 @@
+000 Destiny (expansion)
+001 The Dark Below (expansion)
+002 House of Wolves (expansion)
+003 The Taken King (expansion)
+004 Rise of Iron (expansion)
+
+100 Destiny 2 (expansion)
+102 Curse of Osiris (expansion)
+103 Warmind (expansion)
+200 Forsaken (expansion)
+204 Season of the Outlaw (season)
+205 Season of the Forge (season)
+206 Season of the Drifter (season)
+207 Season of Opulence (season)
+300 Shadowkeep (expansion)
+308 Season of the Undying (season)
+309 Season of Dawn (season)
+310 Season of the Worthy (season)
+311 Season of Arrivals (season)
+400 Beyond Light (expansion)
+412 Season of the Hunt (season)
+413 Season of the Chosen (season)
+414 Season of the Splicer (season)
+415 Season of the Lost (season)
+500 The Witch Queen
+600 Lightfall
+700 The Final Shape
+
+https://d2.destinygamewiki.com/wiki/Seasons
